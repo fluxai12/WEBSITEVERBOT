@@ -28,32 +28,6 @@ interface TradingSettings {
   maxFeeGwei: number;
 }
 
-const themes: Theme[] = [
-  {
-    name: 'Light',
-    botBg: 'bg-gray-50',
-    botText: 'text-gray-800',
-    userBg: 'bg-blue-50',
-    userText: 'text-gray-800',
-    chatBg: 'bg-white'
-  },
-  {
-    name: 'Dark',
-    botBg: 'bg-gray-800',
-    botText: 'text-gray-100',
-    userBg: 'bg-blue-900',
-    userText: 'text-gray-100',
-    chatBg: 'bg-gray-900'
-  },
-  {
-    name: 'Soft Blue',
-    botBg: 'bg-blue-50',
-    botText: 'text-gray-800',
-    userBg: 'bg-indigo-50',
-    userText: 'text-gray-800',
-    chatBg: 'bg-white'
-  }
-];
 
 function NetworkStatus() {
   const [blockHeight, setBlockHeight] = useState(31842967);
