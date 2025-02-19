@@ -510,8 +510,7 @@ export function Terminal() {
                           : 'bg-gray-50 border-gray-200 text-gray-400 cursor-not-allowed'
                       } transition-all duration-200`}
                     >
-                      <WalletIcon className="w-4 h-4" />
-                      <span className="text-sm font-medium">Select Wallet</span>
+                     
                       <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${showWalletDropdown ? 'transform rotate-180' : ''}`} />
                     </button>
                  
