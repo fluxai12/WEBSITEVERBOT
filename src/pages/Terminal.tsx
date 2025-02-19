@@ -499,72 +499,7 @@ export function Terminal() {
                     )}
                   </div>
 
-<div className="relative" ref={walletDropdownRef}>
-                    <button
-                      type="button"
-                      onClick={() => setShowWalletDropdown(!showWalletDropdown)}
-                      disabled={!isConnecting}
-                      className={`flex items-center space-x-2 px-3 py-1.5 rounded-lg border ${
-                        isConnecting 
-                          ? 'bg-white hover:bg-gray-50 border-gray-200 text-gray-800 hover:border-blue-200' 
-                          : 'bg-gray-50 border-gray-200 text-gray-400 cursor-not-allowed'
-                        <div className="relative" ref={walletDropdownRef}>
-                    <button
-                      type="button"
-                      onClick={() => setShowWalletDropdown(!showWalletDropdown)}
-                      disabled={!isConnecting}
-                      className={`flex items-center space-x-2 px-3 py-1.5 rounded-lg border ${
-                        isConnecting 
-                          ? 'bg-white hover:bg-gray-50 border-gray-200 text-gray-800 hover:border-blue-200' 
-                          : 'bg-gray-50 border-gray-200 text-gray-400 cursor-not-allowed'
-                      } transition-all duration-200`}
-                    >
-                      <WalletIcon className="w-4 h-4" />
-                      <span className="text-sm font-medium">Select Wallet</span>
-                      <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${showWalletDropdown ? 'transform rotate-180' : ''}`} />
-                    </button>
-                      } transition-all duration-200`}
-                    >
-                     
-                      <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${showWalletDropdown ? 'transform rotate-180' : ''}`} />
-                    </button>
-                 
 
-                    <AnimatePresence>
-                      {showWalletDropdown && (
-                        <motion.div
-                          initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                          transition={{ duration: 0.2 }}
-                          className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden z-50"
-                        >
-                          {[
-                            { name: 'Phantom', icon: '👻' },
-                            { name: 'Solflare', icon: '🌞' },
-                            { name: 'Backpack', icon: '🎒' },
-                            { name: 'Glow', icon: '✨' }
-                          ].map((wallet, index) => (
-                            <motion.button
-                              key={wallet.name}
-                              type="button"
-                              className="w-full flex items-center space-x-3 px-3 py-2 text-left hover:bg-gray-50 transition-colors"
-                              onClick={() => {
-                                setShowWalletDropdown(false);
-                                handleConnectWallet();
-                              }}
-                              initial={{ opacity: 0, x: 10 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ duration: 0.2, delay: index * 0.05 }}
-                            >
-                              <span className="text-lg">{wallet.icon}</span>
-                              <span className="text-sm font-medium text-gray-800">{wallet.name}</span>
-                            </motion.button>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
 
                   <ClockDisplay />
                 </div>
