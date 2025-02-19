@@ -468,37 +468,8 @@ export function Terminal() {
                   </div>
                   <h2 className="text-gray-800 font-medium">Verbot Terminal</h2>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <div className="relative" ref={themeDropdownRef}>
-                    <button
-                      onClick={() => setShowThemeDropdown(!showThemeDropdown)}
-                      className="flex items-center space-x-2 px-3 py-1.5 rounded-lg hover:bg-gray-100 transition-colors"
-                    >
-                      <Palette className="w-4 h-4 text-gray-600" />
-                      <span className="text-sm text-gray-600">Theme</span>
-                    </button>
-                    
-                    {showThemeDropdown && (
-                      <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg py-2 z-50">
-                        {themes.map((theme) => (
-                          <button
-                            key={theme.name}
-                            onClick={() => {
-                              setCurrentTheme(theme);
-                              setShowThemeDropdown(false);
-                            }}
-                            className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-50 transition-colors flex items-center space-x-2 ${
-                              currentTheme.name === theme.name ? 'text-blue-600' : 'text-gray-700'
-                            }`}
-                          >
-                            <div className={`w-4 h-4 rounded-full ${theme.userBg}`} />
-                            <span>{theme.name}</span>
-                          </button>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
+              
+                
 
 
                   <ClockDisplay />
