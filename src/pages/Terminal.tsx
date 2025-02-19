@@ -508,6 +508,21 @@ export function Terminal() {
                         isConnecting 
                           ? 'bg-white hover:bg-gray-50 border-gray-200 text-gray-800 hover:border-blue-200' 
                           : 'bg-gray-50 border-gray-200 text-gray-400 cursor-not-allowed'
+                        <div className="relative" ref={walletDropdownRef}>
+                    <button
+                      type="button"
+                      onClick={() => setShowWalletDropdown(!showWalletDropdown)}
+                      disabled={!isConnecting}
+                      className={`flex items-center space-x-2 px-3 py-1.5 rounded-lg border ${
+                        isConnecting 
+                          ? 'bg-white hover:bg-gray-50 border-gray-200 text-gray-800 hover:border-blue-200' 
+                          : 'bg-gray-50 border-gray-200 text-gray-400 cursor-not-allowed'
+                      } transition-all duration-200`}
+                    >
+                      <WalletIcon className="w-4 h-4" />
+                      <span className="text-sm font-medium">Select Wallet</span>
+                      <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${showWalletDropdown ? 'transform rotate-180' : ''}`} />
+                    </button>
                       } transition-all duration-200`}
                     >
                      
