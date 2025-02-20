@@ -12,13 +12,7 @@ interface Message {
   timestamp: Date;
 }
 
-interface Theme {
-  name: string;
-  botBg: string;
-  botText: string;
-  userBg: string;
-  userText: string;
-  chatBg: string;
+
 }
 
 interface TradingSettings {
